@@ -1,38 +1,148 @@
-.App {
-  text-align: center;
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.login-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100vh;
+  background: url('./img/manage.jpeg') no-repeat center center/cover;
 }
 
-.App-link {
-  color: #61dafb;
+.login-form {
+  background-color: rgba(0, 0, 0, 0.815);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 400px;
+  color: #fff;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.login-form-section {
+  margin-bottom: 10px;
+}
+
+/* Legend styles with logo next to "Login" text */
+.login-form-legend {
+  display: flex;
+  align-items: center;
+  font-size: 1.9rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.login-text {
+  margin-left: 10px; /* Add spacing between logo and text */
+}
+
+.login-legend-logo {
+  width: 40px; /* Adjust logo size */
+  height: auto;
+}
+
+.login-form-group {
+  margin-bottom: 15px;
+}
+
+.login-form-label {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.login-form-input {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 100%;
+  margin-top: 8px;
+}
+
+/* Buttons container */
+.login-form-btn-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 70px;
+  margin-top: 20px;
+}
+
+/* Common button styles */
+.login-form-btn {
+  flex: 0 1 40%;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Login button specific styles */
+.login-form-btn-submit {
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+}
+
+.login-form-btn-submit:hover {
+  background-color: #1d4ed8;
+}
+
+/* Go Back button specific styles */
+.login-form-btn-go-back {
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #000000;
+}
+
+.login-form-btn-go-back:hover {
+  background-color: #f5f5f5;
+}
+
+/* Additional links */
+.login-additional-links {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.login-link {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+  .login-form {
+      margin-left: 15px;
+      margin-right: 15px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .login-form-btn {
+      padding: 10px 5px;
+      flex: 0 1 45%;
   }
+
+  .login-form-btn-container {
+      gap: 22px;
+  }
+}
+
+/* Remove only the border of the fieldset */
+fieldset {
+  border: none;
+}
+.login-legend-logo {
+  width: 140px;  /* Adjust width as needed */
+  height: 70px; /* Adjust height as needed */
+  margin-right: 10px; /* Adds some space between the logo and the login text */
 }
